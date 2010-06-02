@@ -22,6 +22,11 @@
 
 
 /* basic elements */
+.big 
+{
+    font-size: 2em;
+}
+
 html {
 	margin: 0;
 	padding: 0;

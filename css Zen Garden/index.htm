@@ -17,6 +17,24 @@
 	</style>
 	<link rel="Shortcut Icon" type="image/x-icon" href="http://www.csszengarden.com/favicon.ico" />	
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml" />
+    <script type="text/javascript" src='scripts/jquery-1.4.2.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('h3').add('h1').not('div#preamble h3').fadeOut().fadeIn();
+            $('h3 > span').append(' »')
+                .parent().click(function () {
+                    $(this).siblings().toggle();
+                })
+                .mouseover(
+                    function () { $(this).css('cursor', 'pointer'); })
+                .mouseout(
+                    function () { $(this).css('cursor', ''); })
+                .siblings().hide();
+            $('h1').mouseover(function () {
+                $('.p1').addClass('big');
+            });
+        });
+    </script>
 </head>
 
 <!--
